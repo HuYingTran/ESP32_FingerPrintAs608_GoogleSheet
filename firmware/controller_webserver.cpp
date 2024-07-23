@@ -113,7 +113,7 @@ void webserver_init()
     server.on("/change_link", HTTP_GET, [](AsyncWebServerRequest *request){
         String link;
         if (request->hasParam("url")) {
-            ssid = request->getParam("url")->value();
+            link = request->getParam("url")->value();
         }
         save_string(controller.gg_sheet_api, link);
         status_request = "Cusseccful";
