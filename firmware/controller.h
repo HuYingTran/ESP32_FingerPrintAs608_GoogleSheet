@@ -14,7 +14,7 @@
 #define STA_SSID "HuynhTran"
 #define STA_PASS "Huynh123"
 #define GG_SHEET_LINK "https://docs.google.com/spreadsheets/d/1u8VTG0Kuv-sl8rhMm7leTuXQJc8ndmMLlcBCc6uB350/edit?gid=1932027102#gid=1932027102"
-#define GG_SHEET_API "https://script.google.com/macros/s/AKfycbxGgDNv9DaTQUsXiuAahhZrGEssGPE0zGABLDoatCN8fYwL8krxIdOWZzbZKEOHFbJz/exec"
+#define GG_SHEET_API "https://script.google.com/macros/s/AKfycbycGeKvzfIDV1m0I4GjTKD55zGCxLDWaEYp9hgyfaenAqTw1S6OkUBdgBL0KBLjrk3I/exec"
 
 // Pin for led RGB
 #define PIN_LED_RED 19
