@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="vi">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="icon" href="data:,">
+    <link rel="stylesheet" type="text/css" href="style.css">
+    <title>Giao diện</title>
+</head>
+
+<body>
+    <div class="control-panel">
+        <p><a href="/home"><button class="no_select">HOME</button></a></p>
+        <button class="selected">ADD ID</button>
+        <p><a href="/setting"><button class="no_select">SETTING</button></a></p>
+    </div>
+    <div class="main-content_2">
+        <div class="form-group">%ACTION%</div>
+        <div class="info">
+            <p>Fill in information</p>
+        </div>
+        <form action="%IP_STA%/creat_id" method="get">
+            <div class="form-group">
+                <label for="fmatric">Matric Number</label>
+                <input type="text" id="fmatric" name="matricNumber" required><br>
+                <label for="fname">Name</label>
+                <input type="text" id="fname" name="name" required><br>
+                <label for="flevel">Level</label>
+                <input type="text" id="flevel" name="level" required><br>
+                <label for="fdepartment">Department</label>
+                <input type="text" id="fdepartment" name="department" required><br>
+            </div>
+            <p><button class="add-button">ADD</button></p>
+        </form>
+        <hr>
+        <form action="%IP_STA%/delete_id" method="get">
+            <div class="form-group">
+                <label for="dmatric">Matric Number</label>
+                <input type="text" id="dmatric" name="matric_number" required><br>
+            </div>
+            <button class="add-button">DELETE</button>
+        </form>
+        <div class="total-id">SUM ID: %SUM%</div>
+    </div>
+</body>
+
+</html>

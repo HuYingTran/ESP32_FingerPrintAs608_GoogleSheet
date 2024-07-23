@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="vi">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="icon" href="data:,">
+    <link rel="stylesheet" type="text/css" href="style.css">
+    <title>Giao diện</title>
+</head>
+
+<body>
+    <div class="control-panel">
+        <p><a href="/home"><button class="no_select">HOME</button></a></p>
+        <p><a href="/add_id"><button class="no_select">ADD ID</button></a></p>
+        <button class="selected">SETTING</button>
+    </div>
+    <div class="main-content_2">
+        <div class="section-title">URL Google Sheet</div>
+        <form action="%IP_STA%/change_link" method="get">
+            <div class="form-group">
+                <input type="url" id="url" name="url">
+            </div>
+            <button class="add-button">CHANGE</button>
+        </form>
+        <hr>
+        <div class="section-title">WIFI SETTING</div>
+        <div class="status-section">
+            <div class="info">WIFI CONNET: Cindy</div>
+            <div class="status-circle"></div>
+        </div>
+        <form action="%IP_STA%/wifi_sta" method="get">
+            <div class="form-group">
+                <label for="ssid">SSID</label>
+                <input type="text" id="ssid" name="ssid" required><br>
+                <label for="pass">PASS</label>
+                <input type="password" id="pass" name="pass">
+            </div>
+            <button class="add-button">CONNECT</button>
+        </form>
+        <hr>
+        <form action="%IP_STA%/wifi_ap" method="get">
+            <div class="section-title">CHANGE ADMIN</div>
+            <div class="form-group">
+                <label for="user">USER</label>
+                <input type="text" id="user" name="user"><br>
+                <label for="apass">PASS</label>
+                <input type="password" id="apass" name="apass">
+            </div>
+            <button class="add-button">SAVE</button>
+        </form>
+    </div>
+</body>
+
+</html>

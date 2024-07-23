@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="vi">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="icon" href="data:,">
+    <link rel="stylesheet" type="text/css" href="style.css">
+    <title>Giao diện</title>
+</head>
+<body>
+    <div class="control-panel">
+        <button class="selected">HOME</button>
+        <p><a href="/add_id"><button class="no_select">ADD ID</button></a></p>
+        <p><a href="/setting"><button class="no_select">SETTING</button></a></p>
+    </div>
+    <div class="main-content">
+        <div id="clock">11:39:23 PM</div>
+        <button class="view-data-button" onclick="excel()">DATA</button>
+        <div class="on-off-buttons">
+            <p><a href="/reset"><button class="on-button">RESET</button></a></p>
+            <p><a href="/logout"><button class="off-button">LOGOUT</button></a></p>
+        </div>
+        <div class="info">
+            <p>SUM: %SUM%</p>
+            <p>CHECK IN: %CHECKIN%</p>
+        </div>
+        <div class="date" id="currentDate">Thứ 4, ngày 10 tháng 7 năm 2024</div>
+    </div>
+
+    <script>
+        function excel() {
+            window.location.href = "%URL%";
+        }
+        function updateClock() {
+            const now = new Date();
+            const hours = now.getHours().toString().padStart(2, '0');
+            const minutes = now.getMinutes().toString().padStart(2, '0');
+            const seconds = now.getSeconds().toString().padStart(2, '0');
+            const ampm = hours >= 12 ? 'PM' : 'AM';
+            const clockStr = `${hours}:${minutes}:${seconds} ${ampm}`;
+            document.getElementById('clock').textContent = clockStr;
+        }
+
+        function updateDate() {
+            const now = new Date();
+            const days = ['Chủ Nhật', 'Thứ 2', 'Thứ 3', 'Thứ 4', 'Thứ 5', 'Thứ 6', 'Thứ 7'];
+            const dayName = days[now.getDay()];
+            const day = now.getDate();
+            const month = now.getMonth() + 1; // Months are zero-indexed
+            const year = now.getFullYear();
+            const dateStr = `${dayName}, ${day} / ${month} / ${year}`;
+            document.getElementById('currentDate').textContent = dateStr;
+        }
+
+        setInterval(updateClock, 1000);
+        updateClock();
+        updateDate();
+    </script>
+</body>
+</html>
