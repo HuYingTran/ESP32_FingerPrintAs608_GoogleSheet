@@ -55,6 +55,6 @@ Arduino IDE > Tool > ESP32 Sketch Data Upload
 
 Using code [here](sheet_scrip.js)
 
-Coppy đường dẫn đến google sheet [here](firmware/controller.h#L16)\
-Coppy đường dẫn đến google app sheet [here](firmware/controller.h#L17)
+Copy the link to the google sheet [here](firmware/controller.h#L16)\
+Copy the link to the google apps script sheet [here](firmware/controller.h#L17)
 Change to your wifi in file [firmware/controller.h](firmware/controller.h#L14-15)
