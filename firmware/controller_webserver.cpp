@@ -104,10 +104,16 @@ void webserver_init()
             matric = request->getParam("matric_number")->value();
         }
         id = load_string(matric);
+        if(load_status_id(id)) {
+          controller.check_in--;
+          save_int("check_in",controller.check_in);
+        }
         delete_NVS(matric);
         delete_NVS(id);
         as608_delete(id.toInt());
         delete_gg_sheet(id);
+        controller.sum_id = controller.sum_id-1;
+        save_int("sum_id", controller.sum_id);
     request->send(SPIFFS, "/webserver_add_id.html", String(), false, processor); });
 
     server.on("/change_link", HTTP_GET, [](AsyncWebServerRequest *request){

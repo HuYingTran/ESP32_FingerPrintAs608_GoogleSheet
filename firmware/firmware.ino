@@ -78,7 +78,7 @@ void setup() {
   delay(500);
   lcd_show_ip(controller.sta_ssid, WiFi.localIP().toString());
   fingerPrint_init();
-  controller.sum_id = as608_getCount();
+//  controller.sum_id = as608_getCount();
   Serial.println(controller.sum_id);
 
   configTime(gmtOffset_sec, daylightOffset_sec, ntpServer);

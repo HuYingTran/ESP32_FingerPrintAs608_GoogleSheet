@@ -58,3 +58,12 @@ Using code [here](sheet_scrip.js)
 Copy the link to the google sheet [here](firmware/controller.h#L16)\
 Copy the link to the google apps script sheet [here](firmware/controller.h#L17)
 Change to your wifi in file [firmware/controller.h](firmware/controller.h#L14-15)
+
+## Hardware
+![](image/image2.png)
+
+## Webserver
+![](image/image_login.png)
+![](image/image_home.png)
+![](image/image_add.png)
+![](image/image_setting.png)
