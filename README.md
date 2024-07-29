@@ -60,6 +60,15 @@ Copy the link to the google apps script sheet [here](firmware/controller.h#L17)
 Change to your wifi in file [firmware/controller.h](firmware/controller.h#L14-15)
 
 ## Hardware
+|Color|R|G|B|Status
+|:-----|:--|:--|:--|:------------|
+|Purple|1|0|1|Creat new id|
+|Yellow|1|1|0|No internet|
+|Cyan|0|1|1||
+|Red|1|0|0|Erorr|
+|Green|0|1|0|Cusseccfull|
+|Blue|0|0|1|Available|
+
 ![](image/image2.png)
 
 ## Webserver
